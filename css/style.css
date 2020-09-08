@@ -161,7 +161,20 @@ header{
 }
 
 .header-logo {
-    max-width: 110px;
+    max-width: 200px;
+}
+
+.header-logo img{
+    width:100%;
+    height: auto;
+}
+
+.header-logo h1{
+    color: var(--clr-accent);
+    width:100%;
+    margin:0 auto;
+    font-weight: bolder;
+    word-spacing: 0.5;
 }
 
 /* Novel approach: */
