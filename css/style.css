@@ -301,8 +301,8 @@ li {
 }
 
 .section-intro{
-    background: url('/img/oriental-tiles.png') repeat right top;
-    mix-blend-mode: darken;
+    background: #0D1238 url('/img/oriental-tiles.png') repeat right top;
+   
 }
 
 footer{
@@ -312,7 +312,7 @@ footer{
 main{
     min-height:100vh;
     display: block;
-    background: url('/img/spikes.png') repeat right top;
+    background: #ebebeb url('/img/spikes.png') repeat right top;
 }
 
 
