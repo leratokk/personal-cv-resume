@@ -25,12 +25,12 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
+article, aside, details, figcaption, figure, img,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
 body {
-    line-height: 1.5;
+    line-height: 1.6;
     text-align:center;
     font-family: 'Roboto', sans-serif;
 }
@@ -149,7 +149,7 @@ section{
 
 article{
     display:block;
-    margin:50px auto;
+    margin:20px auto;
 
 }
 
@@ -177,6 +177,10 @@ header{
     word-spacing: 0.5;
 }
 
+.pie-section{
+    margin-top:60px;
+    margin-bottom: 50px;
+}
 /* Novel approach: */
 /*  .header-nav--open state class is toggled on document's body */
 /*  see application.js */
@@ -305,6 +309,10 @@ li {
    
 }
 
+span.period{
+    color: #8f6a02;
+}
+
 footer{
     padding: 2rem;
 }
@@ -322,7 +330,6 @@ main{
     justify-content: space-around;
     align-content: center;
     max-width: 1000px;
-    padding:0 2rem;
     margin: 0 auto;
 
 }
@@ -348,36 +355,48 @@ h1{
 }
 
 .into-img, .into-copy{
-    flex:1 100%;
+    margin: 2rem auto;
+}
+
+.into-copy{
+    padding:2rem;
 }
 
 .into-img{
     display: block;
-    border-radius: 50%;
-    width:290px;
-    height:290px;
-    margin:2rem auto;
-   
 }
 
 .into-img img{
-    width: 290px;
-    height: 290px;
+    width:280px;
+    height:280px;
     border-radius: 50%;
-    text-align: center;
-    background-color: #fff;
-    border:5px solid #8e7119;
+    border: 3px solid #8f6a02;
+    
 }
 
+
 .intro-h1{
+    width:100%;
     color:#f0f0f0;
-    font-size:1.8rem;
+    font-size: 1.38rem;
     font-weight: bolder;
+    margin: 0 auto;
+}
+
+.intro-h2{
+    display:block;
+    width:100%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: initial;
+    margin:10px auto;
 }
 
 .sub-intro-h4{
     color: #dfac10;
-    font-size:2rem;
+    font-size:1.4rem;
+    margin: 2rem auto;
    
 }
 
@@ -385,13 +404,13 @@ h1{
     line-height:1.6;
     color:#f0f0f0;
     text-align: left;
-    padding: 2rem;
+    margin: 3rem auto;
    
   
 }
 .button{
-    width: 210px;
-    height: 50px;
+    display:block;
+    width:100%;
     color: white;
     border-radius: 60px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -400,12 +419,21 @@ h1{
     font-size:0.9rem;
     padding:1rem 2rem;
     border: none;
-    margin:3rem auto;
     letter-spacing: 2px;
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
+    line-height:20px;
+    margin: auto;
 
+}
+
+.subtitle-p--portfolio {
+    font-weight: var(--fw-bold);
+    margin: 0 0 1em;
+    padding: .25em 1em;
+    margin-bottom: 2em;
+    color:rgb(73, 73, 73);
 }
 
 a.button:hover {
@@ -423,7 +451,7 @@ a.button:hover {
         align-items: center;
         flex-direction: column;
         width: 100%;
-        padding: 0rem 0.8rem;
+        padding: 2rem 1rem;
   }
 
   .career-container ul {
@@ -433,7 +461,7 @@ a.button:hover {
     flex-direction: column;
     width: 100%;
     list-style: none;
-    margin: 0;
+    margin: 18px;
     padding:0;
     text-align: left;
     position: relative;
@@ -443,9 +471,9 @@ a.button:hover {
 .career-container ul li {
     box-sizing: border-box;
     display: block;
-    margin: 2rem auto;
+    margin:0 auto;
     width: 100%;
-    height: auto;
+    height: 550px;
     position: relative;
     background-color: rgb(255, 255, 255);
     border: 2px #a87c03 solid;
@@ -457,6 +485,10 @@ a.button:hover {
     box-shadow: 3px 3px 5px 6px rgb(155, 152, 152);
 }
 
+.career-container ul li:nth-child(2), .career-container ul li:nth-child(3) {
+    margin-top: 3rem;
+}
+
 main h1{
     color:#333333;
 }
@@ -464,7 +496,9 @@ main h1{
 
 
 .about-h1{
-    color:#1c1c1c;
+    color:#333333;
+    letter-spacing: 0.4px;
+    font-weight: bold;
 }
 
 .title h2 {
@@ -492,8 +526,13 @@ main h1{
 
 
 .contact-container{
-    background-color: #dddddd;
+  
+    padding: 2rem 0;
 
+}
+
+.contact-list, .personal-list{
+    background-color: #ddd;
 }
 
 
@@ -525,6 +564,7 @@ div.contact-container > ul.contact-list > li > p > a{
     justify-content: space-around;
     flex-direction: column;
     margin:0rem auto;
+    padding: 2rem 0;
 }
 
 .contact-list li, .personal-list li{
@@ -542,8 +582,8 @@ div.contact-container > ul.contact-list > li > p > a{
 
 
  .circle {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     background-color: #8e7119;
     -moz-box-shadow: 3px 3px 5px 6px rgb(222, 222, 222);
@@ -564,14 +604,14 @@ div.contact-container > ul.contact-list > li > p > a{
 .circle i, .personal-list i {
     color: #fff;
     position: relative;
-    top: 35%;
     text-align: center;
-    font-size:2rem;
+    font-size:1.6rem;
+    line-height: 70px;
 }
 
 .personal-list i {
 
-    font-size:4rem;
+    font-size:3rem;
     color:#8e7119
 }
 
@@ -579,6 +619,10 @@ div.contact-container > ul.contact-list > li > p > a{
 .circle svg{
     width:30px;
    
+}
+
+.circle a {
+    line-height:80px;
 }
 
 .circle:hover .fa-phone-alt{
@@ -621,14 +665,15 @@ div.contact-container > ul.contact-list > li > p > a{
 }
 
 .mail::before{
-    font-family: 'Ionicons';
-    content: "\f2eb";
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    content: "\f0e0";
     position: absolute;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
     transition: all 0.5s;
-    font-size: 2.1rem;
+    font-size: 1.7rem;
     color:#fff;
     outline: none;
     border: none;
@@ -642,14 +687,15 @@ div.contact-container > ul.contact-list > li > p > a{
 }
 
 .mail::after{
-    font-family: 'Ionicons';
-    content: "\f384";
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    content: "\f0e0";
     position: absolute;
     top:calc(100% + 10px);
     left:50%;
     transform: translate(-50%,-50%);
     transition: all 0.5s;
-    font-size: 2.1rem;
+    font-size: 1.7rem;
     color:#fff;
     opacity: 0;  
     outline: none;
@@ -743,7 +789,8 @@ width: 100%;
     background: var(--clr-light);
     color: var(--clr-light);
     text-align: center;
-    padding: 5em 2em;
+    padding:2rem 1rem;
+    padding-bottom:5rem;
 }
 
 .subtitle-p--portfolio {
@@ -759,9 +806,6 @@ width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     justify-items: center;
 
-}
-
-.a-portfolio-item{
 }
 
 .a-portfolio-item:hover{
@@ -827,38 +871,52 @@ footer a{
 }
 
 @media screen and (min-width: 767px) {
-
- 
     .intro-container{
         display:flex;
         flex-direction: row;
         justify-content: center;
         align-content: center;
-
+        padding: 0 2rem;
+        margin:2rem auto;
     }
 
     .into-img, .into-copy{
-        flex: 1 calc(50% - 30px);
+        margin: 2rem auto;
+        flex-basis:50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 2rem;
+    }
+
+    .into-img img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 3px solid #8f6a02;
     }
 
 
-.into-img{
-    display: block;
-    border-radius: 50%;
-    width: 340px;
-    height: 340px;
-    margin:2rem auto;
-   
-}
+    .intro-h1{
+        font-size:1.5rem;
+    }
 
-.into-img img{
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    text-align: center;
-    background-color: #fff;
-    border:5px solid #8e7119;
-}
+    .intro-h2{
+        width:100%;
+        font-size:1.2rem;
+        text-align: center;
+    }
+
+    .sub-intro-h4{
+        margin: 1rem auto;
+    }
+
+    .sub-intro-p{
+        margin: 2rem auto;
+        margin-top:0rem;
+        margin-bottom:3rem;
+    }
 
 .personal-list li{
     flex-direction: row;
@@ -872,7 +930,6 @@ padding: 0 2rem;
 
 .contact-container {
     flex: 1 30%;
-    
     }
 
 
@@ -882,9 +939,13 @@ padding: 0 2rem;
     width: 100%;
     min-width: 260px;
     max-width: 450px;
-    margin: 2rem auto;
-    height: 480px;
+    margin: 0rem auto;
+    height: 530px;
 
+}
+
+.career-container ul li:nth-child(2) , .career-container ul li:nth-child(3){
+    margin-top:3rem;
 }
 
 .container ul li > span {
@@ -894,17 +955,17 @@ padding: 0 2rem;
     left: -2.9rem;
     width: 0px;
     height: 100%;
-    border: 2px solid #aaa;
+    border: 2px solid #bebebe;
 }
 
 .career-container ul li > span {
     content: '';
     position: absolute;
     top: 0rem;
-    left: -1.4rem;
+    left: -2.6rem;
     width: 0px;
     height: 100%;
-    border: 2px solid #aaa;
+    border: 2px solid #bebebe;
 }
 
 
@@ -912,7 +973,7 @@ padding: 0 2rem;
     content: '';
     position: absolute;
     top: 0;
-    left: -20px;
+    left: -40px;
     width: 0px;
     height: 100%;
     border: 2px dashed #8f6a02;
@@ -925,8 +986,8 @@ padding: 0 2rem;
     height: 10px;
     border-radius: 50%;
     background: rgb(212, 212, 212);
-    border: 1px solid #aaa;
-    left: -0.4rem;
+    border: 1px solid #bebebe;
+    left: -0.35rem;
 }
 
 
@@ -937,8 +998,8 @@ padding: 0 2rem;
     height: 10px;
     border-radius: 50%;
     background: rgb(212, 212, 212);
-    border: 2px solid #aaa;
-    left: -0.3rem;
+    border: 2px solid #bebebe;
+    left: -0.35rem;
 }
 
 
@@ -954,9 +1015,17 @@ padding: 0 2rem;
 
 .career-container ul li .time span {
     position: absolute;
-    left: -16px;
+    left: -34px;
     width: 30px;
     text-align: right;
+    color:rgb(141, 141, 141);
+    font-size:0.9rem;
+    letter-spacing: 0.3px;
+}
+
+.career-container ul li .time span:nth-child(odd) {
+    color:#8f6a02;
+    font-weight: bold;
 }
 
 .career-container ul li .time span:first-child {
@@ -964,7 +1033,7 @@ padding: 0 2rem;
 }
 
 .career-container ul li .time span:last-child {
-    top: 100%;
+    top: 98%;
 }
 
 .contacts{
@@ -992,26 +1061,32 @@ padding: 0 2rem;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    margin:2rem auto;
-    margin-left:1rem;
+    margin:2rem;
     box-sizing: border-box;
 }
 
 .personal-list li{
     flex-direction: column;
-    margin:auto;
+    margin:2rem auto;
     text-align: center;
 }
 
 .personal-list li p{
     width:100%;
-    margin: 5rem auto;
+    margin: 2rem auto;
 }
 
+ul.personal-list{
+    margin:2rem auto;
+}
 
 }
 
 @media screen and (min-width:992px) {
+
+    .wrapper{
+        padding: 0rem 2rem;
+    }
 
     .career-container {
         flex-basis:1 50%;
@@ -1025,8 +1100,7 @@ padding: 0 2rem;
     .career-container {
         flex: 1 60%;
         padding: 0 2rem;
-        margin-left: 1rem;
-        
+    
         }
         
         .contact-container {
@@ -1046,6 +1120,10 @@ padding: 0 2rem;
         margin-bottom: 1rem;
     }
 
+    .career-container ul{
+        margin:81px;
+    }
+
     .career-container ul li {
 
         height: 360px;
@@ -1055,29 +1133,29 @@ padding: 0 2rem;
         content: '';
         position: absolute;
         top: 0;
-        left: -10px;
+        left: -32px;
        
     }
 
     .career-container ul li > span::before, .career-container ul li > span::after {
         content: '';
         position: absolute;
-        left: -0.32rem;
+        left: -0.30rem;
     }
 
     .career-container ul li .time span {
         position: absolute;
-        left: -96px; 
+        left: -70px; 
     }
 
     .career-container ul li > span {
         content: '';
         position: absolute;
         top: 0rem;
-        left: -3.0rem;
+        left: -2.25rem;
         width: 0px;
         height: 100%;
-        border: 2px solid #aaa;
+        border: 2px solid #bebebe;
     }
 
 
@@ -1086,12 +1164,22 @@ padding: 0 2rem;
 }
 
 .career-container ul li .time span:last-child {
-    top: 103%;
+    top: 100%;
 }
 
 .container ul li {
     height: 300px;
 
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.circle i, .circle a {
+    line-height: 60px;
 }
 
 }
@@ -1101,14 +1189,64 @@ padding: 0 2rem;
         content: '';
         position: absolute;
         top: 0;
-        left: -13px;
+        left: -26px;
     }
+
+    .career-container ul li > span {
+        content: '';
+    position: absolute;
+    top: 0rem;
+    left: -2.05rem;
+       
+    }
+}
+
+@media screen and (min-width:1200px) {
 
     .career-container ul li > span {
         content: '';
         position: absolute;
         top: 0rem;
-        left: -3.38rem;
-       
+        left: -2.05rem;
     }
+
+    .career-container ul li .time span {
+        left:1rem;
+
+    }
+}
+
+
+@media screen and (min-width:1360px) {
+
+    .career-container ul li > span {
+        content: '';
+        position: absolute;
+        top: 0rem;
+        left: -2.05rem;
+    }
+
+    .career-container ul li .time span {
+        position: absolute;
+        top: 0rem;
+        left: -3.3rem;
+    }
+
+}
+
+@media screen and (min-width:1440px) {
+
+    .career-container ul li > span {
+        content: '';
+        position: absolute;
+        top: 0rem;
+        left: -2.05rem;
+    }
+
+    .career-container ul li .time span {
+        position: absolute;
+        top: 0rem;
+        left: -4.5rem;
+    }
+
 }
